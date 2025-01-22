@@ -17,8 +17,7 @@
 
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+            <a href="<?= $domain. '/posts/create.php' ?>" class="btn btn-sm btn-outline-secondary">Add New</a>
           </div>
         </div>
       </div>
@@ -31,7 +30,7 @@
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Ttile</th>
+              <th scope="col">Title</th>
               <th scope="col">Content</th>
               <th scope="col">Published Date</th>
               <th scope="col"></th>
@@ -46,7 +45,7 @@
               <td><?= $row['content'] ?></td>
               <td><?= $row['published_date'] ?></td>
               <td>
-                <a href="#" class="btn btn-primary">Edit</a>
+                <a href="<?= $domain. '/posts/edit.php?post_id=' .$row['id'] ?>" class="btn btn-primary">Edit</a>
                 <a href="#" class="btn btn-danger">Delete</a>
               </td>
             </tr>

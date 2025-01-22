@@ -1,3 +1,9 @@
+<?php
+    $domain = 'http://localhost/samplephp';
+?>   
+
+
+
 
 <!doctype html>
 <html lang="en">
@@ -13,10 +19,11 @@
 
     
     <!-- Bootstrap core CSS -->
-<link href="../css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+<link href="<?= $domain ?>/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <meta name="theme-color" content="#7952b3">
+
+<script src="https://cdn.tiny.cloud/1/begtut3lb74f1afhcygb0rseh2tm631qlnl1p2l1qbepg4lo/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 
 
     <style>
@@ -37,7 +44,7 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="<?= $domain ?>/css/dashboard.css" rel="stylesheet">
   </head>
   <body>
     
