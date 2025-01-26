@@ -11,6 +11,7 @@ $title = $_POST['title'];
         goBack("Title is required");
     }
 
+    
     // validate and sanetize content
     if (isPresent($content)) {
         $content = sanitizeText($content);    

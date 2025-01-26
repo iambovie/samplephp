@@ -6,31 +6,30 @@
     include('../helpers.php');
 
 
-    $post_id = $_GET['post_id'];
+    $image_id = $_GET['image_id'];
 
-    $sql = 'SELECT * FROM articles WHERE ID = :post_id';
+    $sql = 'SELECT * FROM images WHERE ID = :image_id';
 
     $statement = $pdo->prepare($sql);
 
     $statement->execute([
-        ':post_id' => $post_id
+        ':image_id' => $image_id
     ]);
 
 
     $post = $statement->fetch();
 
-    $title = $post['title'];
-    $content = $post['content'];
-    $published_date = $post['published_date'];
+    $name = $post['name'];
+    $url = $post['url'];
 ?>    
 
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
-    <h1 class="h2 mt-5">Edit Articles</h1>
+    <h1 class="h2 mt-5">Edit Image</h1>
 
     <?php displayMessage() ?>
 
-    <form action="<?= $domain ?>/posts/update.php?post_id=<?= $post_id ?>" method="POST">
+    <form action="<?= $domain ?>/images/update.php?image_id=<?= $image_id ?>" method="POST" enctype="multipart/form-data">
         <?php include('_form.php') ?>
     </form>
 
